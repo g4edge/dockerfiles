@@ -1,10 +1,8 @@
-boost-devel
-CGAL-devel
+boost169-devel
 cmake
 curl
 gmp-devel
 mpfr-devel
-OCE-*
 tbb-devel
 vim
 vtk-devel
