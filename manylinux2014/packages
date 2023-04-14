@@ -1,0 +1,11 @@
+boost-devel
+CGAL-devel
+cmake
+curl
+gmp-devel
+mpfr-devel
+OCE-*
+tbb-devel
+vim
+vtk-devel
+wget
