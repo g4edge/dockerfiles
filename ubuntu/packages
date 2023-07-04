@@ -13,8 +13,13 @@ libcgal-dev
 libgmp-dev
 libmpfr-dev
 libocct-*
+libssl-dev
 libtbb-dev
+libx11-dev
+libxext-dev
+libxft-dev
 libxi-dev
+libxpm-dev
 libvtk9-dev
 locales
 make

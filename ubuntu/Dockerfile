@@ -3,6 +3,8 @@ FROM ubuntu:jammy
 USER root
 WORKDIR /root
 
+ARG ROOT_VERSION=6.28.04
+
 # configure system
 COPY . /root
 RUN apt-get update -qq && \
@@ -18,3 +20,15 @@ ENV LC_ALL="en_US.utf8" \
 # default python
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1 && \
     update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+
+RUN mkdir -p /opt/root && \
+    wget -q -O- "https://root.cern/download/root_v${ROOT_VERSION}.Linux-ubuntu22-x86_64-gcc11.3.tar.gz" \
+        | tar --strip-components 1 -C /opt/root --strip=1 -x -z
+
+ENV ROOTSYS="/opt/root" \
+    PATH="$PATH:/opt/root/bin" \
+    LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/root/lib" \
+    MANPATH="$MANPATH:/opt/root/man" \
+    PYTHONPATH="$PYTHONPATH:/opt/root/lib" \
+    JUPYTER_CONFIG_DIR="$JUPYTER_CONFIG_DIR:/opt/root/etc/notebook" \
+    CLING_STANDARD_PCH="none"
