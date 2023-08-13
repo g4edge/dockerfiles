@@ -23,6 +23,7 @@ libxpm-dev
 libvtk9-dev
 locales
 make
+numdiff
 occt-misc
 pybind11-dev
 python-is-python3
