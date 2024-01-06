@@ -17,7 +17,7 @@ available on [Docker Hub](https://hub.docker.com/r/g4edge).
   pyg4ometry CI by the cbuildwheel action
 - Automated builds are configured on Docker Hub to build `manylinux2014` images
   at every commit or pull request created in this repository (see
-  [Docker Hub](https://hub.docker.com/repository/docker/g4edge/manylinux2014_x86_64)
-  > Builds > Configure Automated Builds)
+  [Docker Hub](https://hub.docker.com/repository/docker/g4edge/manylinux2014_x86_64) >
+  Builds > Configure Automated Builds)
 - the `bin/build-and-deploy.sh` script can be used to build locally and push
   images to the Docker Hub
