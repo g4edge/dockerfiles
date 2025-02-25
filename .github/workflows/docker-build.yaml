@@ -46,7 +46,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
 
-  manylinux2014:
+  manylinux2014_x86_64:
     name: Push manylinux2014 image 
     runs-on: ubuntu-latest
     steps:
