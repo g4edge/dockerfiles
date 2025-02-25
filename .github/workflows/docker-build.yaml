@@ -71,7 +71,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: g4edge/manylinux2014
+          images: g4edge/manylinux2014_x86_64
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
