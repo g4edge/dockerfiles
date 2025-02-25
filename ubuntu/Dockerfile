@@ -3,7 +3,7 @@ FROM ubuntu:jammy
 USER root
 WORKDIR /root
 
-ARG ROOT_VERSION=6.28.10
+ARG ROOT_VERSION=6.28.12
 
 # configure system
 COPY . /root
