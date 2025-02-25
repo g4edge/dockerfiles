@@ -47,7 +47,7 @@ jobs:
 
 
   manylinux2014:
-    name: Push manylinux2024 image 
+    name: Push manylinux2014 image 
     runs-on: ubuntu-latest
     steps:
       - name: Dump job context
