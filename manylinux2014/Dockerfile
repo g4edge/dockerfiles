@@ -21,10 +21,10 @@ RUN sed -i '/tsflags=nodocs/d' /etc/yum.conf && \
 
 # manually installing OCCT because the version in the repos is too old
 RUN mkdir -p OCCT/{src,build} && \
-    wget -q -O- https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_6_0.tar.gz \
+    wget -q -O- https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_8_1.tar.gz \
         | tar --strip-components 1 -C OCCT/src --strip=1 -x -z && \
     cd OCCT/build && \
-    cmake -DCMAKE_INSTALL_PREFIX=/opt/opencascade ../src && \
+    cmake -DCMAKE_INSTALL_PREFIX=/opt/opencascade -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ../src && \
     make -j$(nproc) && \
     make install && \
     cd ../ && \
