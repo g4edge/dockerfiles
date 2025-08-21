@@ -4,7 +4,7 @@ function docker_cmd() {
     docker build --pull --rm "$@"
 }
 
-prefix="gipert/pyg4ometry-"
+prefix="g4edge/pyg4ometry-"
 tag=$(date +%Y%m%d)
 
 images=(manylinux2014)
