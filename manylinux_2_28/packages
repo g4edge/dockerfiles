@@ -1,0 +1,11 @@
+boost169-devel
+cmake
+curl
+gmp-devel
+mpfr-devel
+tbb-devel
+tcl-devel
+tk-devel
+vim
+vtk-devel
+wget
